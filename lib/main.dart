@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_favorite_place_app/screens/places.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,9 @@ final theme = ThemeData(
   useMaterial3: true,
   colorScheme: colorScheme,
   scaffoldBackgroundColor: colorScheme.surface,
+  appBarTheme: AppBarTheme(
+    backgroundColor: colorScheme.surfaceContainer
+  ),
   textTheme: GoogleFonts.ubuntuCondensedTextTheme().copyWith(
     titleSmall: GoogleFonts.ubuntuCondensed(
       fontWeight: FontWeight.bold,
@@ -37,9 +41,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Favorite Places',
       theme: theme,
-      home: const Center(
-        child: Text('Aloha'),
-      ),
+      home: const PlacesScreen(),
     );
   }
 }

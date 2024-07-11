@@ -1,1 +1,0 @@
-// class PlacesListScreen extends {}
